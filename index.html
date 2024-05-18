@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it-IT">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loriscatiz</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -16,7 +16,7 @@
     <main>
         <section class="hero">
             <div class="wrapper hero-inner">
-                <h1 class="title-900">Sviluppatore <span class="clr-primary"> Web</span> a <span class="clr-primary">360
+                <h1 class="title-900 clr-text">Sviluppatore <span class="clr-primary"> Web</span> a <span class="clr-primary">360
                         Gradi</span></h1>
                 <a href="#modulo" class="labutton button button--primary">Contattami</a>
             </div>
@@ -32,7 +32,7 @@
                     <div class="card__header"><i class="fa-brands fa-figma title-100 clr-primary"></i>
                         <h4 class="title-100 clr-primary">Progettazione con Figma</h4>
                     </div>
-                    <p class="clr-text">Esperienza consolidata nell'utilizzo di Figma per la progettazione e il design
+                    <p class="clr-text text">Esperienza consolidata nell'utilizzo di Figma per la progettazione e il design
                         grafico. Capacità
                         di creare layout intuitivi e accattivanti per esperienze utente di successo.</p>
                 </div>
@@ -40,15 +40,15 @@
                     <div class="card__header"><i class="fa-brands fa-elementor title-100 clr-primary"></i>
                         <h4 class="title-100 clr-primary">Wordpress ed Elementor</h4>
                     </div>
-                    <p class="clr-text">Competenza avanzata nell'implementazione di siti web su piattaforma WordPress
+                    <p class="clr-text text">Competenza avanzata nell'implementazione di siti web su piattaforma WordPress
                         utilizzando Elementor. Capacità di creare siti web dinamici e responsive, personalizzati per
                         soddisfare le esigenze del cliente.</p>
                 </div>
-                <div class="card">
+                <div class="card ">
                     <div class="card__header"><i class="fa-solid fa-code title-100 clr-primary"></i>
                         <h4 class="title-100 clr-primary">HTML, CSS e JavaScript</h4>
                     </div>
-                    <p class="clr-text">Conoscenza approfondita di HTML5, CSS3 e JavaScript per lo sviluppo front-end.
+                    <p class="clr-text text">Conoscenza approfondita di HTML5, CSS3 e JavaScript per lo sviluppo front-end.
                         Abilità nel creare codice pulito e efficiente per garantire prestazioni ottimali e una user
                         experience coinvolgente.</p>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="card__header"><i class="fa-solid fa-users title-100 clr-primary"></i>
                         <h4 class="title-100 clr-primary">Competenze trasversali</h4>
                     </div>
-                    <p class="clr-text">Conoscenza di base di concetti di marketing digitale, SEO e altre strategie di
+                    <p class="clr-text text">Conoscenza di base di concetti di marketing digitale, SEO e altre strategie di
                         ottimizzazione online. Capacità di comprendere e integrare le esigenze di marketing nei progetti
                         web per massimizzare la visibilità online e l'engagement degli utenti.
                     </p>
@@ -67,10 +67,10 @@
 
         <section class="about wrapper">
             <img src="https://placehold.jp/1440x1080.png" alt="">
-            <div>
+            <div class="about-content">
                 <h2 class="title-100 clr-primary">Chi sono</h2>
                 <h3 class="title-700 clr-primary">Web developer & designer </h3>
-                <p class="clr-text">Ciao, sono Loris Catizzone, un appassionato sviluppatore web e designer con una
+                <p class="clr-text text">Ciao, sono Loris Catizzone, un appassionato sviluppatore web e designer con una
                     fervida creatività e una solida esperienza nel campo della progettazione digitale. Con una dedizione
                     senza fine per l'innovazione e la qualità, mi impegno a creare esperienze digitali di successo che
                     superano le aspettative dei clienti. Attraverso una combinazione di competenze tecniche e visione
@@ -85,18 +85,18 @@
 
         <section class="contact">
             <div class="wrapper">
-                <div class="form-wrapper">
+                <div class="form-wrapper" id="modulo">
                     <h2 class="title-500 clr-primary-300">Contattami</h2>
-                    <form action="#" class="form">
+                    <form action="https://formsubmit.co/514b85e4bbb403d039cc891dcc2e1bca" method="POST" class="form">
                         <label for="name" class="labutton clr-text">Nome e cognome</label>
-                        <input type="text" id="name">
+                        <input name = "Nome e cognome" type="text" id="name">
                         <label for="email" class="labutton clr-text">Email</label>
-                        <input type="email" id="email">
+                        <input name = "Email" type="email" id="email">
                         <label for="tel" class="labutton clr-text">Telefono</label>
-                        <input type="tel" id="tel">
+                        <input name = "Telefono" type="tel" id="tel">
                         <label for="message" class="labutton clr-text">Messaggio</label>
-                        <textarea name="message" id="message" cols="30" rows="5"></textarea>
-                        <input type="submit" value="ciao"></form>
+                        <textarea name="Messagio" id="message" cols="30" rows="5"></textarea>
+                        <input type="submit" value="invia" class="button button--primary labutton"></form>
                 </div>
                 <img src="https://placehold.jp/1440x1080.png" alt="">
             </div>

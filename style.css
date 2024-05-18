@@ -6,11 +6,14 @@
     --clr-primary-500: #791CD7;
     --clr-primary-700: #AD70E9;
     --clr-primary-900: #E5D5F4;
+
     --clr-neutral-900: #E6E6E6;
     --clr-neutral-100: #1A1A1A;
 
+    scroll-behavior: smooth;
 }
 *, *::before,*::after{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -69,6 +72,10 @@ body{
     color: var(--clr-primary-100);
 }
 
+input[type="submit"]{
+    cursor: pointer;
+}
+
 .labutton{
     font-size: 1rem;
     font-weight: 500;
@@ -87,6 +94,27 @@ body{
     max-width: 1200px;
     width: calc(100% - 4rem);
     margin: 0  auto;
+}
+
+.button{
+    padding: .5em 1em;
+    background-color: greenyellow;
+    border-radius: 300px;
+    align-self: start;
+    transition: all .25s;
+}
+
+.button--primary{
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-900);
+}
+
+.button--primary:is(:hover, :focus-visible){
+    background-color: var(--clr-primary-300);
+}
+
+form .button{
+    align-self: stretch;
 }
 
 /* end utility classes and css reset */
@@ -121,7 +149,7 @@ body{
     margin-block-start: 3rem;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat( auto-fit, minmax(276px, 1fr) );
+    grid-template-columns: repeat( 4, 1fr );
     grid-template-rows: auto 1fr;
 }
 
@@ -133,8 +161,11 @@ body{
     border-radius: 2rem;
     grid-template-rows: subgrid;
     grid-row: span 2;
-    
+    position: relative;
+    transition: box-shadow .5s;
 }
+
+
 
 .card__header{
  display: flex;
@@ -153,11 +184,20 @@ body{
     margin-block-start: 1em;
 }
 
+.about-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content :not(:first-child, :nth-child(2)){
+    margin-top: 1em;
+}
 
 
 .contact{
     margin-block-start: 9rem;
     background-color: var(--clr-primary-700);
+    padding-block-end: 4rem;
 }
 
 .contact .wrapper{
@@ -174,7 +214,13 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    transition: box-shadow .5s;
 }
+
+.form-wrapper:is(:hover, :focus-within), .card:is(:hover, :focus-within){
+    box-shadow: var(--clr-primary-300) -10px 10px 30px;
+}
+
 
 .form{
     display: flex;
@@ -190,4 +236,35 @@ input, textarea{
 }
 label{
     margin-block-start: 1rem;
+}
+
+
+
+@media (width < 1200px) {
+
+    
+ .cards{
+    grid-template-columns: repeat( 2, 1fr );
+ }
+
+ .about{
+    grid-template-columns: 1fr;
+ }
+ 
+ .contact .wrapper{
+    grid-template-columns: 1fr;
+ }
+
+}
+
+@media (width < 767px){
+ .cards{
+    grid-template-columns: 1fr;
+ }   
+ .form-wrapper{
+    padding: 1rem 2rem;
+ }
+ .hero-inner h1{
+    padding-inline-end: 0;
+ }
 }
