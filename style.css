@@ -1,285 +1,301 @@
 :root {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
-    --clr-primary-100: #110120;
-    --clr-primary-300: #400978;
-    --clr-primary-500: #791CD7;
-    --clr-primary-700: #AD70E9;
-    --clr-primary-900: #E5D5F4;
+  --clr-primary-100: #110120;
+  --clr-primary-300: #400978;
+  --clr-primary-500: #791cd7;
+  --clr-primary-700: #ad70e9;
+  --clr-primary-900: #e5d5f4;
 
-    --clr-neutral-900: #E6E6E6;
-    --clr-neutral-100: #1A1A1A;
+  --clr-neutral-900: #e6e6e6;
+  --clr-neutral-100: #1a1a1a;
 
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    background-color: var(--clr-neutral-900);
+  background-color: var(--clr-neutral-900);
 }
 
 .title-900 {
-    font-size: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    letter-spacing: -0.03ch;
+  font-size: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
+  font-weight: 900;
+  line-height: 1.2em;
+  letter-spacing: -0.03ch;
 }
 
 .title-700 {
-    font-size: clamp(1.75rem, 1.2143rem + 2.381vw, 3rem);
-    ;
-    font-weight: 800;
-    line-height: 1.2em;
-    letter-spacing: -0.02ch;
+  font-size: clamp(1.75rem, 1.2143rem + 2.381vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2em;
+  letter-spacing: -0.02ch;
 }
 
 .title-500 {
-    font-size: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
-    font-weight: 700;
-    line-height: 1.2em;
+  font-size: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2em;
 }
 
 .title-300 {
-    font-size: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
-    font-weight: 600;
-    line-height: 1.2em;
+  font-size: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2em;
 }
 
 .title-100 {
-    font-size: clamp(1.125rem, 1.0714rem + 0.2381vw, 1.25rem);
-    font-weight: 500;
-    line-height: 1.2em;
-
+  font-size: clamp(1.125rem, 1.0714rem + 0.2381vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.2em;
 }
 
 .clr-primary {
-    color: var(--clr-primary-500);
+  color: var(--clr-primary-500);
 }
 
 .clr-primary-300 {
-    color: var(--clr-primary-300);
+  color: var(--clr-primary-300);
 }
 
 .clr-text {
-    color: var(--clr-primary-100);
+  color: var(--clr-primary-100);
 }
 
 input[type="submit"] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .labutton {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1em;
-    text-transform: uppercase;
-    letter-spacing: .15ch;
-
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.15ch;
 }
 
 .text {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5em;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5em;
 }
 
 .wrapper {
-    max-width: 1200px;
-    width: calc(100% - 4rem);
-    margin: 0 auto;
+  max-width: 1200px;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
 }
 
 .button {
-    padding: .5em 1em;
-    border: none;
-    border-radius: 300px;
-    align-self: start;
-    transition: all .25s;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 300px;
+  align-self: start;
+  transition: all 0.25s;
 }
 
 .button--primary {
-    background-color: var(--clr-primary-500);
-    color: var(--clr-neutral-900);
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-900);
 }
 
 .button--primary:is(:hover, :focus-visible) {
-    background-color: var(--clr-primary-300);
+  background-color: var(--clr-primary-300);
 }
-
-
 
 /* end utility classes and css reset */
 
-
 .hero {
-
-    background-color: red;
-
+  position: relative;
+  background-image: url("https://placehold.jp/1440x1080.png");
+  background-position: center;
+  background-size: cover;
 }
-
+.overlay {
+  background-color: var(--clr-primary-900);
+  opacity: 0.5;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
 .hero-inner {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
+  z-index: 1;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .hero-inner h1 {
-    padding-inline-end: 50%;
+  padding-inline-end: 50%;
+}
+
+.projects {
+  margin-block-start: 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.projects :where(.title-700, .title-500) {
+  text-align: center;
 }
 
 .competenze {
-    margin-block-start: 6rem;
+  margin-block-start: 6rem;
 }
 
 .competenze :where(.title-700, .title-500) {
-    text-align: center;
+  text-align: center;
 }
 
 .cards {
-    margin-block-start: 3rem;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr;
+  margin-block-start: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
 }
 
 .card {
-    display: grid;
-    gap: 1.25rem;
-    background-color: var(--clr-primary-900);
-    padding: 1.25rem;
-    border-radius: 2rem;
-    grid-template-rows: subgrid;
-    grid-row: span 2;
-    position: relative;
-    transition: box-shadow .5s;
+  display: grid;
+  gap: 1.25rem;
+  background-color: var(--clr-primary-900);
+  padding: 1.25rem;
+  border-radius: 2rem;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  position: relative;
+  transition: box-shadow 0.5s;
 }
 
+.card--small {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: start;
+}
 
+.card :where(img) {
+  height: 10rem;
+  object-fit: contain;
+}
 
 .card__header {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .about {
-    margin-block-start: 6rem;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 5fr 7fr;
+  margin-block-start: 6rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 5fr 7fr;
 }
 
 .about p {
-    margin-block-start: 1em;
+  margin-block-start: 1em;
 }
 
 .about-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-content :not(:first-child, :nth-child(2)) {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .contact {
-    margin-block-start: 17rem;
-    background-color: var(--clr-primary-700);
-    padding-block-end: 5rem;
+  margin-block-start: 17rem;
+  background-color: var(--clr-primary-700);
+  padding-block-end: 5rem;
 }
 
-
 .contact .wrapper {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .contact__content {
-    margin-block-start: -7rem;
-    background-color: var(--clr-primary-900);
-    padding: 4rem 2rem;
-    border-radius: 3rem;
+  margin-block-start: -7rem;
+  background-color: var(--clr-primary-900);
+  padding: 4rem 2rem;
+  border-radius: 3rem;
 }
 
 .form {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-:is(label, input[type='submit']) {
-    margin-block-start: 1em;
+:is(label, input[type="submit"]) {
+  margin-block-start: 1em;
 }
 
 input,
 textarea {
-    margin-block-start: .5em;
-    border-radius: .25rem;
-    border: none;
-    padding: .25em .5em;
-
+  margin-block-start: 0.5em;
+  border-radius: 0.25rem;
+  border: none;
+  padding: 0.25em 0.5em;
 }
 
 :is(input, textarea):focus-visible {
-    outline-width: .125rem;
-    outline-color: var(--clr-primary-500);
+  outline-width: 0.125rem;
+  outline-color: var(--clr-primary-500);
 }
 
-
 @media (width < 1200px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .about {
+    grid-template-columns: 1fr;
+  }
 
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .contact {
+    margin-top: 12rem;
+  }
 
-    .about {
-        grid-template-columns: 1fr;
-    }
-
-    .contact{
-        margin-top: 12rem;
-    }
-
-    .contact .wrapper {
-        grid-template-columns: 1fr;
-
-    }
-
-
+  .contact .wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (width < 767px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-    .hero-inner h1 {
-        padding-inline-end: 0;
-    }
-    .contact__content{
-        padding: 2rem 1rem;
-    }
+  .hero-inner h1 {
+    padding-inline-end: 0;
+  }
 
-
+  .contact__content {
+    padding: 2rem 1rem;
+  }
 }
