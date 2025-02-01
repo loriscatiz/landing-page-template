@@ -206,7 +206,9 @@ input[type="submit"] {
   gap: 1rem;
   align-items: center;
 }
-
+.card-icon {
+  height: 2rem;
+}
 .about {
   margin-block-start: 6rem;
   display: grid;
@@ -245,6 +247,59 @@ input[type="submit"] {
   padding: 4rem 2rem;
   border-radius: 3rem;
 }
+.case-studies-cards-outer-wrapper {
+  overflow: clip;
+}
+
+.case-studies-cards-inner-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 130%;
+  gap: 2rem;
+}
+
+.cs-card-pos-0 {
+  grid-column-start: 1;
+}
+
+.cs-card-pos-1 {
+  grid-column-start: 2;
+}
+.cs-card-pos-2 {
+  grid-column-start: 3;
+}
+.cs-card-pos-3 {
+  grid-column-start: 4;
+}
+
+.cs-card-pos-0.new-head-card {
+  transform: translateX(-100%) translateX(-2rem);
+}
+.sliding-right.new-head-card {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.sliding-left {
+  transform: translateX(-100%) translateX(-2rem);
+  transition: transform 300ms;
+}
+.sliding-right {
+  transform: translateX(100%) translateX(2rem);
+  transition: transform 300ms;
+}
+
+.case-studies {
+  margin-block-start: 6rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+}
+.case-study-card {
+  background-color: red;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
 
 .form {
   display: grid;
@@ -257,6 +312,7 @@ input[type="submit"] {
 
 input,
 textarea {
+  font-family: inherit;
   margin-block-start: 0.5em;
   border-radius: 0.25rem;
   border: none;
