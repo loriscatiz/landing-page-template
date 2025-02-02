@@ -21,6 +21,17 @@
   padding: 0;
 }
 
+* {
+  outline: solid red 1px;
+}
+main {
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -108,6 +119,7 @@ input[type="submit"] {
   border-radius: 300px;
   align-self: start;
   transition: all 0.25s;
+  display: flex;
 }
 
 .button--primary {
@@ -119,6 +131,11 @@ input[type="submit"] {
   background-color: var(--clr-primary-300);
 }
 
+.button svg {
+  height: 1em;
+  width: 1em;
+  fill: var(--clr-neutral-900);
+}
 /* end utility classes and css reset */
 
 .hero {
@@ -251,6 +268,10 @@ input[type="submit"] {
   overflow: clip;
 }
 
+.slider-buttons-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
 .case-studies-cards-inner-wrapper {
   position: relative;
   display: grid;
@@ -273,6 +294,11 @@ input[type="submit"] {
   grid-column-start: 4;
 }
 
+.studies-first-inner-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+}
 .cs-card-pos-0.new-head-card {
   transform: translateX(-100%) translateX(-2rem);
 }
@@ -297,6 +323,7 @@ input[type="submit"] {
 }
 .case-study-card {
   background-color: red;
+  max-width: 80vw;
   grid-row-start: 1;
   grid-row-end: 1;
 }
@@ -324,13 +351,17 @@ textarea {
   outline-color: var(--clr-primary-500);
 }
 
-@media (width < 1200px) {
+@media (width < 1024px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .about {
     grid-template-columns: 1fr;
+  }
+
+  .case-studies-cards-inner-wrapper {
+    width: 200%;
   }
 
   .contact {
@@ -347,6 +378,17 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .case-studies {
+    grid-template-columns: 1fr;
+  }
+  .case-studies-cards-inner-wrapper {
+    width: 400%;
+  }
+
+  .studies-first-inner-section {
+    max-width: 80vw;
+    width: 100%;
+  }
   .hero-inner h1 {
     padding-inline-end: 0;
   }
